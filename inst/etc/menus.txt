@@ -1,0 +1,15 @@
+# Rcmdr menus for the steepness package
+
+
+#   type       menu/item      operation/parent          label         command/menu                activation    install?
+menu           steepMenu            topMenu               ""                                     ""                                    ""                      "" 
+item           topMenu              cascade               "Steepness"                            steepMenu                             ""                      "packageAvailable('steepness')"
+menu           steeptestMenu        steepMenu             ""                                     ""                                    ""                      "packageAvailable('steepness')"
+item           steeptestMenu        command               "Steepness test based on Dij"          Rcmdr.steeptestDij                    ""                      "packageAvailable('steepness')"
+item           steeptestMenu        command               "Steepness test based on Pij"          Rcmdr.steeptestPij                    ""                      "packageAvailable('steepness')"
+item           steepMenu            cascade               "Steepness Test"                       steeptestMenu                         ""                      "packageAvailable('steepness')"
+item           steepMenu            command               "Steepness Plot"                  	 Rcmdr.steepplot                       ""                      "packageAvailable('steepness')"
+menu           steephelpMenu        steepMenu             ""                                     ""                                    ""                      "packageAvailable('steepness')"
+item           steephelpMenu        command               "Help about steepness"	         Rcmdr.help.steepness                  ""                      "packageAvailable('steepness')"
+item           steephelpMenu        command               "Help about RcmdrPlugin.steepness"     Rcmdr.help.RcmdrPlugin.steepness      ""                      "packageAvailable('steepness')"
+item           steepMenu            cascade               "About steepness"                      steephelpMenu                         ""                      "packageAvailable('steepness')"

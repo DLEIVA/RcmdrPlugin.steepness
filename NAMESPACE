@@ -1,0 +1,3 @@
+export(Rcmdr.steeptestDij,Rcmdr.steeptestPij,Rcmdr.steepplot,Rcmdr.help.steepness,Rcmdr.help.RcmdrPlugin.steepness)
+import(Rcmdr,steepness)
+importFrom(tcltk,tkbutton,ttknotebook,tkadd,tkselect)
